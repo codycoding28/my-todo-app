@@ -1,7 +1,19 @@
 import streamlit as st
 import functions
 
+
+
 todos = functions.get_todos()
+
+st.title("Welcome to my site!!!")
+st.subheader("Below are a couple of things i've implemented so far!")
+
+st.title("Squared calculator")
+x = st.slider("This number squared is: ")
+st.write(x, "squared is", x * x)
+st.title("Find a color code")
+color = st.color_picker('Pick A Color', '#00f900')
+st.write('The current color is', color)
 
 
 def add_todo():
